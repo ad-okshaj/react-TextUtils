@@ -1,5 +1,5 @@
 # TextUtils (React App)
-[![made-with-React](https://badgen.net/badge/Made-with/React.js/orange)](https://www.reactjs.org/) [![Npm package version](https://badgen.net/badge/npm/v8.3.0/green )](https://npmjs.com/package/npm/v/8.3.0) [  ![Npm package version](https://badgen.net/badge/LinkedIn/Adokshaj-Bhandarkar/blue)](https://www.linkedin.com/in/adokshaj-bhandarkar-9a82211aa/) 
+[![made-with-React](https://badgen.net/badge/Made-with/React.js/orange)](https://www.reactjs.org/) [![npm-package-version](https://badgen.net/badge/npm/v8.3.0/green )](https://npmjs.com/package/npm/v/8.3.0) [![LinkedIn](https://badgen.net/badge/LinkedIn/Adokshaj-Bhandarkar/blue)](https://www.linkedin.com/in/adokshaj-bhandarkar-9a82211aa/) 
 
 - TextUtils is a React.js app used to manipulate text in the text area.
 - Features of the app are written below.
