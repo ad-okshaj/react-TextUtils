@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# TextUtils (React App)
+[![made-with-React](https://badgen.net/badge/Made-with/React.js/orange)](https://www.reactjs.org/) [![Npm package version](https://badgen.net/badge/npm/v8.3.0/green )](https://npmjs.com/package/npm/v/8.3.0) [  ![Npm package version](https://badgen.net/badge/LinkedIn/Adokshaj-Bhandarkar/blue)](https://www.linkedin.com/in/adokshaj-bhandarkar-9a82211aa/) 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- TextUtils is a React.js app used to manipulate text in the text area.
+- Features of the app are written below.
+- Made with by - Made using create-react-app by **Adokshaj Bhandarkar**
 
-## Available Scripts
+## Features
+- Top right switch **'Enable DarkMode'** enables dark mode on the page
+- **Convert to UpperCase** button converts text in the text area to uppercase
+- **Convert to LowerCase** button converts text in the text area to lowercase
+- **Copy Text** button copies the text in the text area to the clipboard
+- **Remove extra spaces** button removes extra spaces from the text in text area
+- **Clear Text button** clears the text area
 
-In the project directory, you can run:
+## Screenshots
+**LightMode**
+<img src="https://i.imgur.com/2MMeKsu.png" alt="react-TextUtils-lightMode"/>
 
-### `npm start`
+**DarkMode**
+<img src="https://i.imgur.com/EZmW0Dp.png" alt="react-TextUtils-lightMode"/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Demo
+- Click [**here**](ad-okshaj.github.io/react-TextUtils/) to see the app in action .
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
