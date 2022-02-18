@@ -21,7 +21,7 @@
 <img src="https://i.imgur.com/EZmW0Dp.png" alt="react-TextUtils-lightMode"/>
 
 ## Demo
-- Click [**here**](ad-okshaj.github.io/react-TextUtils/) to see the app in action .
+- Click [**here**](https://ad-okshaj.github.io/react-TextUtils) to see the app in action .
 
 
 
