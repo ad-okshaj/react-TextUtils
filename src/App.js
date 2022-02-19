@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar.js";
+import TextForm from "./components/TextForm.js";
+import Alert from "./components/Alert.js";
+// import About from "./components/About.js";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// Link, useRouteMatch, useParams
 
 function App() {
+  // these are for darkMode.
+  const [mode, setMode] = useState("light");
+  const toggleMode = () => {
+    if (mode === "light") {
+      setMode("dark");
+      document.body.style.backgroundColor = "black";
+      showAlert("DarkMode has been enabled.", "success");
+      document.title = "TextUtils - Home - DarkMode";
+    } else {
+      setMode("light");
+      showAlert("LightMode has been enabled.", "success");
+      document.body.style.backgroundColor = "white";
+      document.title = "TextUtils - Home - LightMode";
+    } // mode === "light" ? setMode("dark") : setMode("light");
+  };
+
+  //these are for alerts.
+  const [alert, setalert] = useState(null);
+  const showAlert = (message, type) => {
+    setalert({
+      msg: message,
+      type: type,
+    });
+    setTimeout(() => {
+      setalert(null);
+    }, 3000);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar title="TextUtils" aboutText="About TextUtils" mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alert} />
+      <div className="container my-3">
+        <TextForm heading="Enter the text to analyze:" mode={mode} toggleMode={toggleMode} showAlert={showAlert} />
+      </div>
+      {/* <Route exact path="/about" element={<About />} />  */}
+    </>
   );
 }
 
