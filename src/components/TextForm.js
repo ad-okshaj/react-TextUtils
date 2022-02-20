@@ -12,10 +12,7 @@ export default function TextForm(props) {
     props.showAlert("Converted to LowerCase!", "success");
   };
   const handleCopy = () => {
-    let copyText = document.getElementById("textAreaBox");
-    copyText.select();
-    navigator.clipboard.writeText(copyText.value);
-    document.getSelection().removeAllRanges();
+    navigator.clipboard.writeText(text);
     props.showAlert("Copied to Clipboard!", "success");
   };
   const handleSpaces = () => {
@@ -80,7 +77,7 @@ export default function TextForm(props) {
         <h2>Your text summary</h2>
         <p>
           {
-            text.split(" ").filter((element) => {
+            text.split(/\s+/).filter((element) => {
               return element.length !== 0;
             }).length
           }{" "}
