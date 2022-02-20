@@ -3,8 +3,8 @@ import "./App.css";
 import Navbar from "./components/Navbar.js";
 import TextForm from "./components/TextForm.js";
 import Alert from "./components/Alert.js";
-// import About from "./components/About.js";
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import About from "./components/About.js";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // Link, useRouteMatch, useParams
 
 function App() {
@@ -38,12 +38,16 @@ function App() {
 
   return (
     <>
-      <Navbar title="TextUtils" aboutText="About TextUtils" mode={mode} toggleMode={toggleMode} />
-      <Alert alert={alert} />
-      <div className="container my-3">
-        <TextForm heading="Enter the text to analyze:" mode={mode} toggleMode={toggleMode} showAlert={showAlert} />
-      </div>
-      {/* <Route exact path="/about" element={<About />} />  */}
+      <Router>
+        <Navbar title="TextUtils" aboutText="About TextUtils" mode={mode} toggleMode={toggleMode} />
+        <Alert alert={alert} />
+        <div className="container my-3">
+          <Routes>
+            <Route exact path="/" element={<TextForm heading="TextUtils - Word Counter, Character Counter, Remove extra spaces" mode={mode} toggleMode={toggleMode} showAlert={showAlert} />}></Route>
+            <Route exact path="/about" element={<About mode={mode} />}></Route>
+          </Routes>
+        </div>
+      </Router>
     </>
   );
 }

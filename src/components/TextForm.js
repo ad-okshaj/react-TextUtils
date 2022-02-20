@@ -15,7 +15,8 @@ export default function TextForm(props) {
     let copyText = document.getElementById("textAreaBox");
     copyText.select();
     navigator.clipboard.writeText(copyText.value);
-    props.showAlert("Copied to Clipbaord!", "success");
+    document.getSelection().removeAllRanges();
+    props.showAlert("Copied to Clipboard!", "success");
   };
   const handleSpaces = () => {
     let newText = text.split(/[ ]+/);
@@ -39,7 +40,7 @@ export default function TextForm(props) {
           color: props.mode === "light" ? "black" : "white",
         }}
       >
-        <h1 className="mb-3">{props.heading}</h1>
+        <h1 className="mb-4">{props.heading}</h1>
         <div className="mb-3">
           <textarea
             className="form-control"
@@ -54,19 +55,19 @@ export default function TextForm(props) {
             }}
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>
+        <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>
           Convert to UpperCase
         </button>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleLowClick}>
+        <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleLowClick}>
           Convert to LowerCase
         </button>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleCopy}>
+        <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleCopy}>
           Copy Text
         </button>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleSpaces}>
+        <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleSpaces}>
           Remove extra spaces
         </button>
-        <button className="btn btn-primary mx-1 mt-1 my-1" onClick={handleClearClick}>
+        <button disabled={text.length === 0} className="btn btn-primary mx-1 mt-1 my-1" onClick={handleClearClick}>
           Clear Text
         </button>
       </div>
@@ -84,10 +85,14 @@ export default function TextForm(props) {
             }).length
           }{" "}
           words, {text.length} chars <br />
-          {0.008 * text.split(" ").length} minutes to read.
+          {0.008 *
+            text.split(" ").filter((element) => {
+              return element.length !== 0;
+            }).length}{" "}
+          minutes to read.
         </p>
         <h2>Preview</h2>
-        <p>{text.length > 0 ? text : "Enter text above to preview here."}</p>
+        <p>{text.length > 0 ? text : "Nothing to preview."}</p>
       </div>
     </>
   );
