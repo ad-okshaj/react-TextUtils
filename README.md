@@ -3,7 +3,7 @@
 
 - TextUtils is a React.js app used to manipulate text in the text area.
 - Features of the app are written below.
-- Made with by - Made using create-react-app by **Adokshaj Bhandarkar**
+- Made using create-react-app by **Adokshaj Bhandarkar**
 
 ## Features
 - Top right switch **'Enable DarkMode'** enables dark mode on the page
